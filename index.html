@@ -5,34 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taito Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
   </head>
   <body>
-    <div id="load" class="load">
+    <div id="load" class="load" style="display: none">
       <div id="load_back" class="load-back"></div>
       <div class="load-top"><span>Taito</span></div>
     </div>
     <section id="top" class="top">
-      <video
-        poster="https://uk-portfolio.net/wp-content/themes/mytheme/img/portfolio/uk-portfolio-pre.png"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="top-video"
-      >
-        <source
-          src="https://uk-portfolio.net/wp-content/themes/mytheme/img/top-video.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <div class="inner top-wrapper">
+      <div class="fade-img">
+        <img src="./img/mv/campfire.jpg" alt="" />
+        <img src="./img/mv/children.jpg" alt="" />
+        <img src="./img/mv/ground.jpg" alt="" />
+        <img src="./img/mv/mountain.jpg" alt="" />
+        <img src="./img/mv/ogunquit.jpg" alt="" />
+        <img src="./img/mv/plouzane.jpg" alt="" />
+      </div>
+      <div class="top-wrapper">
         <div class="top-logo">
           <h1 class="top-logo-title">
             <img src="./img/taito_logo.png" alt="Taito" />
           </h1>
-          <p id="logoSb" class="top-logo-sbtitle">PORTFOLIO</p>
-          <div id="logoText" class="top-logo-text">Web Create Service</div>
-          <div id="logoCircle" class="top-logo-circle"></div>
+          <div id="logoText" class="top-logo-text">Web Creater</div>
         </div>
         <div class="top-text">
           <p>あなただけのWebサイトを</p>
