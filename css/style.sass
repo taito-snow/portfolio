@@ -1,6 +1,23 @@
 body
     background-color: #2F2F2F
     color: #fff
+a
+    color: #fff
+    text-decoration: none
+h2
+    position: relative
+    color: #FFFFFF45
+    font-family: HeadLineA
+    letter-spacing: 11.25px
+    font-size: 65px
+    span
+        position: absolute
+        font-size: 20px
+        font-family: Hiragino Sans
+        letter-spacing: 1px
+        color: #fff
+        bottom: 10px
+        margin-left: -100px
 .inner
     max-width: 960px
     margin: 0 auto
@@ -46,3 +63,28 @@ body
             border-top: 1px solid
             content: ""
             width: 5em
+header
+    .pc-header
+        nav.header
+            display: flex
+            justify-content: space-between
+            font-size: 15px
+            .header-list
+                display: flex
+                li
+                    padding: 30px 20px
+                    cursor: pointer
+                    -webkit-transition: 0.3s ease-in-out
+                    -moz-transition: 0.3s ease-in-out
+                    -o-transition: 0.3s ease-in-out
+                    transition: 0.3s ease-in-out
+                    &:hover
+                        background-color: red
+    .sp-header
+        display: none
+
+@media screen and ( max-width: 750px )
+    .pc-header
+        display: none
+    .sp-header
+        display: block
