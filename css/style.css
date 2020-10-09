@@ -3,6 +3,14 @@ body {
   color: #fff;
 }
 
+section {
+  padding-top: 50px;
+}
+
+section.top {
+  padding-top: 0 !important;
+}
+
 a {
   color: #fff;
   text-decoration: none;
