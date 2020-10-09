@@ -34,6 +34,14 @@ h2 span {
   margin-left: -100px;
 }
 
+h2.left {
+  text-align: right;
+}
+
+h2.left span {
+  margin-left: -240px;
+}
+
 .inner {
   max-width: 960px;
   margin: 0 auto;
@@ -121,6 +129,56 @@ header .pc-header nav.header .header-list li:hover {
 
 header .sp-header {
   display: none;
+}
+
+.about .about-text {
+  margin-top: 30px;
+}
+
+.about .about-text .about-top {
+  display: flex;
+}
+
+.about .about-text .about-top .about_img {
+  width: 88%;
+}
+
+.about .about-text .about-top .name {
+  display: flex;
+}
+
+.about .about-text .about-top .name span {
+  writing-mode: vertical-rl;
+}
+
+.about .about-text .about-top .name .name-l {
+  font-size: 45px;
+  line-height: 200%;
+  letter-spacing: 10px;
+}
+
+.about .about-text .about-top .name .name-s {
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+.about .about-text .about-text-wrap {
+  margin-top: 30px;
+}
+
+.about .about-text .about-text-wrap h4 {
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.about .about-text .about-text-wrap .career {
+  margin-top: 25px;
+}
+
+.about .about-text .about-text-wrap .career h5 {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 750px) {
