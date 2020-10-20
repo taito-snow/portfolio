@@ -47,6 +47,12 @@ h2.left span {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 750px) {
+  .inner {
+    margin: 0 5%;
+  }
+}
+
 .fade-img {
   position: relative;
   z-index: -1;
@@ -98,10 +104,22 @@ h2.left span {
   justify-content: center;
 }
 
+@media screen and (max-width: 750px) {
+  .top-wrapper .top-text {
+    font-size: 1.2rem;
+  }
+}
+
 .top-wrapper .top-text:after {
   border-top: 1px solid;
   content: "";
   width: 5em;
+}
+
+@media screen and (max-width: 750px) {
+  .top-wrapper .top-text:after {
+    width: 4rem;
+  }
 }
 
 header .pc-header nav.header {
@@ -117,9 +135,6 @@ header .pc-header nav.header .header-list {
 header .pc-header nav.header .header-list li {
   padding: 30px 20px;
   cursor: pointer;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -129,6 +144,60 @@ header .pc-header nav.header .header-list li:hover {
 
 header .sp-header {
   display: none;
+}
+
+.work .work-wrapper {
+  margin-top: 20px;
+}
+
+.work .work-wrapper .work-contents .work-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content {
+    display: block;
+  }
+}
+
+.work .work-wrapper .work-contents .work-content p.img {
+  width: 65%;
+}
+
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content p.img {
+    width: 100%;
+  }
+}
+
+.work .work-wrapper .work-contents .work-content .work-content-text {
+  width: 35%;
+  padding: 0 20px;
+  position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content .work-content-text {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.work .work-wrapper .work-contents .work-content .work-content-text .work-name {
+  font-size: 22px;
+  color: #DDB47C;
+}
+
+.work .work-wrapper .work-contents .work-content .work-content-text .work-dis {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.work .work-wrapper .work-contents .work-content .work-content-text .detail {
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .about .about-text {
@@ -143,8 +212,20 @@ header .sp-header {
   width: 88%;
 }
 
+@media screen and (max-width: 750px) {
+  .about .about-text .about-top .about_img {
+    width: 90%;
+  }
+}
+
 .about .about-text .about-top .name {
   display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .about .about-text .about-top .name {
+    padding-right: 5%;
+  }
 }
 
 .about .about-text .about-top .name span {
@@ -155,6 +236,13 @@ header .sp-header {
   font-size: 45px;
   line-height: 200%;
   letter-spacing: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .about .about-text .about-top .name .name-l {
+    font-size: 40px;
+    line-height: 130%;
+  }
 }
 
 .about .about-text .about-top .name .name-s {
@@ -171,6 +259,12 @@ header .sp-header {
   font-size: 22px;
 }
 
+@media screen and (max-width: 750px) {
+  .about .about-text .about-text-wrap h4 {
+    font-size: 20px;
+  }
+}
+
 .about .about-text .about-text-wrap .career {
   margin-top: 25px;
 }
@@ -182,6 +276,96 @@ header .sp-header {
 }
 
 @media screen and (max-width: 750px) {
+  .about .about-text .about-text-wrap .career p {
+    font-size: 14px;
+  }
+}
+
+.service .service-wrapper .service-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  .service .service-wrapper .service-items {
+    display: block;
+  }
+}
+
+.service .service-wrapper .service-items .service-item {
+  text-align: center;
+  margin: 1%;
+  padding: 35px;
+  width: 31%;
+  background: #D1D1D10D 0% 0% no-repeat padding-box;
+}
+
+@media screen and (max-width: 750px) {
+  .service .service-wrapper .service-items .service-item {
+    width: 100%;
+    margin: 5% auto;
+  }
+}
+
+.service .service-wrapper .service-items .service-item .service-item-logo {
+  font-size: 42px;
+}
+
+.service .service-wrapper .service-items .service-item .service-item-ttl {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.service .service-wrapper .service-items .service-item .service-item-text {
+  font-size: 14px;
+}
+
+.contact .inner {
+  text-align: center;
+}
+
+.contact .inner .contact-text p {
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  background: #FFFFFF45;
+  padding: 40px;
+}
+
+footer .sns-container .sns-container-list {
+  display: flex;
+  justify-content: center;
+}
+
+footer .sns-container .sns-container-list .menu-item {
+  margin: 8px;
+  font-size: 17px;
+}
+
+footer .sns-container .sns-container-list a:hover {
+  opacity: 0.5;
+}
+
+footer .copy-right {
+  font-size: 14px;
+}
+
+.btn {
+  width: fit-content;
+  padding: 15px 25px;
+  margin: 30px auto;
+  background: #A0A0A02C;
+  font-family: Hiragino Mincho ProN;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 750px) {
   .pc-header {
     display: none;
   }
@@ -189,3 +373,4 @@ header .sp-header {
     display: block;
   }
 }
+/*# sourceMappingURL=style.css.map */

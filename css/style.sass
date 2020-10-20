@@ -29,6 +29,8 @@ h2.left
 .inner
     max-width: 960px
     margin: 0 auto
+    @media screen and ( max-width: 750px )
+        margin: 0 5%
 .fade-img
     position: relative
     z-index: -1
@@ -67,10 +69,14 @@ h2.left
         display: flex
         align-items: center
         justify-content: center
+        @media screen and ( max-width: 750px )
+            font-size: 1.2rem
         &:after
             border-top: 1px solid
             content: ""
             width: 5em
+            @media screen and ( max-width: 750px )
+                width: 4rem
 header
     .pc-header
         nav.header
@@ -90,6 +96,36 @@ header
                         background-color: red
     .sp-header
         display: none
+.work
+    .work-wrapper
+        margin-top: 20px
+        .work-contents
+            .work-content
+                display: flex
+                flex-wrap: wrap
+                @media screen and ( max-width: 750px )
+                    display: block
+                p.img
+                    width: 65%
+                    @media screen and ( max-width: 750px )
+                        width: 100%
+                .work-content-text
+                    width: 35%
+                    padding: 0 20px
+                    position: relative
+                    @media screen and ( max-width: 750px )
+                        width: 100%
+                        padding: 0
+                    .work-name
+                        font-size: 22px
+                        color: #DDB47C
+                    .work-dis
+                        font-size: 18px
+                        margin: 15px 0
+                    .detail
+                        right: 0
+                        bottom: 0
+                        position: absolute
 .about
     .about-text
         margin-top: 30px
@@ -97,14 +133,21 @@ header
             display: flex
             .about_img
                 width: 88%
+                @media screen and ( max-width: 750px )
+                    width: 90%
             .name
                 display: flex
+                @media screen and ( max-width: 750px )
+                    padding-right: 5%
                 span
                     writing-mode: vertical-rl
                 .name-l
                     font-size: 45px
                     line-height: 200%
                     letter-spacing: 10px
+                    @media screen and ( max-width: 750px )
+                        font-size: 40px
+                        line-height: 130%
                 .name-s
                     letter-spacing: 4px
                     font-weight: normal
@@ -113,13 +156,70 @@ header
             h4
                 font-weight: normal
                 font-size: 22px
+                @media screen and ( max-width: 750px )
+                    font-size: 20px
             .career
                 margin-top: 25px
                 h5
                     font-weight: normal
                     font-size: 16px
                     margin: 10px 0
-
+                p
+                    @media screen and ( max-width: 750px )
+                        font-size: 14px
+.service
+    .service-wrapper
+        .service-items
+            display: flex
+            flex-wrap: wrap
+            @media screen and ( max-width: 750px )
+                display: block
+            .service-item
+                text-align: center
+                margin: 1%
+                padding: 35px
+                width: 31%
+                background: #D1D1D10D 0% 0% no-repeat padding-box
+                @media screen and ( max-width: 750px )
+                    width: 100%
+                    margin: 5% auto
+                .service-item-logo
+                    font-size: 42px
+                .service-item-ttl
+                    font-size: 20px
+                    margin: 20px 0
+                .service-item-text
+                    font-size: 14px
+.contact
+    .inner
+        text-align: center
+        .contact-text
+            p
+                font-size: 14px
+footer
+    text-align: center
+    background: #FFFFFF45
+    padding: 40px
+    .sns-container
+        .sns-container-list
+            display: flex
+            justify-content: center
+            .menu-item
+                margin: 8px
+                font-size: 17px
+            a:hover
+                opacity: 0.5
+    .copy-right
+        font-size: 14px
+.btn
+    width: fit-content
+    padding: 15px 25px
+    margin: 30px auto
+    background: #A0A0A02C
+    font-family: Hiragino Mincho ProN
+    font-size: 15px
+    &:hover
+        opacity: 0.6
 @media screen and ( max-width: 750px )
     .pc-header
         display: none
