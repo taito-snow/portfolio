@@ -1,6 +1,67 @@
 body
     background-color: #2F2F2F
     color: #fff
+#header.m_fixed
+    left: 0
+    position: fixed
+    z-index: 1
+    top: 0
+    width: 100%
+    background-color: rgba(51,51,51,.8)
+.fadeInTop
+    opacity: 0
+    animation-name: fadein-bottom
+    animation-delay: 1.5s
+    animation-duration: 2.5s
+    animation-timing-function: ease-out
+    animation-fill-mode: forwards
+.fadeIn
+    opacity: 0
+.fadeInDown
+    animation-delay: 0.5s
+    animation-name: fadein-bottom
+    animation-duration: 1.5s
+    animation-timing-function: ease-out
+    animation-fill-mode: forwards
+.fadeInTitleR
+    opacity: 0
+.fadeInTitleL
+    opacity: 0
+.fadeInRight
+    animation-name: fadein-right
+    animation-duration: 1s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+.fadeInLeft
+    animation-name: fadein-left
+    animation-duration: 1s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+@keyframes fadein-bottom
+    0%
+        opacity: 0
+        transform: translateY(40px)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+@keyframes fadein-right
+    0%
+        opacity: 0
+        transform: translateX(500px)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+@keyframes fadein-left
+    0%
+        opacity: 0
+        transform: translateX(-500px)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+
 section
     padding-top: 50px
 section.top
@@ -26,6 +87,8 @@ h2.left
     text-align: right
     span
         margin-left: -240px
+.banner
+    margin-bottom: 25px
 .inner
     max-width: 960px
     margin: 0 auto
@@ -51,14 +114,52 @@ h2.left
         width: fit-content
         padding: 20px 40px
         text-align: center
-        border: 1px solid orange
-        h1.top-logo-title
-            img
-                width: 280px
-        .top-logo-text
-            color: #fff
-            font-family: Hiragino Mincho ProN
-            font-size: 1.5rem
+        overflow: hidden
+        z-index: -1
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+        &:before
+            bottom: 0
+            left: -360px
+            width: 360px
+            height: 1px
+            animation: leftAnim 2s linear 0s infinite
+            background: linear-gradient(to left, orange, rgba(255, 255, 255, 0.1))
+        &:after
+            bottom: -200px
+            right: 0
+            width: 1px
+            height: 200px
+            animation: bottomAnim 2s linear 1s infinite
+            background: linear-gradient(to bottom, orange, rgba(255, 255, 255, 0.1))
+        .top-logo-border
+            &:before,
+            &:after
+                content: ''
+                position: absolute
+            &:before
+                top: 0
+                right: -360px
+                width: 360px
+                height: 1px
+                animation: rightAnim 2s linear 0s infinite
+                background: linear-gradient(to right, orange, rgba(255, 255, 255, 0.1))
+            &:after
+                top: -200px
+                left: 0
+                width: 1px
+                height: 200px
+                animation: topAnim 2s linear 1s infinite
+                background: linear-gradient(to top, orange, rgba(255, 255, 255, 0.1))
+            h1.top-logo-title
+                img
+                    width: 280px
+            .top-logo-text
+                color: #fff
+                font-family: Hiragino Mincho ProN
+                font-size: 1.5rem
     .top-text
         position: absolute
         bottom: 20%
@@ -77,6 +178,50 @@ h2.left
             width: 5em
             @media screen and ( max-width: 750px )
                 width: 4rem
+        p
+            position: relative
+            overflow: hidden
+            &:before
+                position: absolute
+                display: block
+                content: ""
+                top: 30px
+                right: 0
+                width: 60px
+                height: 1px
+                background: -webkit-linear-gradient(right,#fff,rgba(255,255,255,.1))
+                background: -moz-linear-gradient(right,#fff,rgba(255,255,255,.1))
+                background: linear-gradient(to left,#fff,rgba(255,255,255,.1))
+                animation: flowRight 2.5s linear 0s infinite
+//四角
+@keyframes topAnim
+    0%
+        top: -200px
+    100%
+        top: 200px
+@keyframes bottomAnim
+    0%
+        bottom: -200px
+    100%
+        bottom: 200px
+@keyframes rightAnim
+    0%
+        right: -360px
+    100%
+        right: 360px
+@keyframes leftAnim
+    0%
+        left: -360px
+    100%
+        left: 360px
+// 左から右流れる
+@keyframes flowRight
+    0%
+        left: 0%
+
+    100%
+        left: 100%
+
 header
     .pc-header
         nav.header
@@ -103,6 +248,7 @@ header
             .work-content
                 display: flex
                 flex-wrap: wrap
+                padding: 20px
                 @media screen and ( max-width: 750px )
                     display: block
                 p.img
@@ -127,6 +273,7 @@ header
                         bottom: 0
                         position: absolute
 .about
+    padding-top: 90px
     .about-text
         margin-top: 30px
         .about-top
@@ -146,7 +293,7 @@ header
                     line-height: 200%
                     letter-spacing: 10px
                     @media screen and ( max-width: 750px )
-                        font-size: 40px
+                        font-size: 32px
                         line-height: 130%
                 .name-s
                     letter-spacing: 4px
@@ -190,16 +337,37 @@ header
                     margin: 20px 0
                 .service-item-text
                     font-size: 14px
+.skill
+    .skill-content
+        background: #FFFFFF45
+        padding: 70px 0
+        ul.skill-elements
+            display: flex
+            flex-wrap: wrap
+            li.skill-element
+                width: 14%
+                text-align: center
+                padding: 40px 0
+                @media screen and ( max-width: 750px )
+                    width: 25%
+                i
+                    font-size: 50px
+                p
+                    font-weight: 900
+                    font-size: 14px
 .contact
     .inner
         text-align: center
         .contact-text
             p
                 font-size: 14px
+                line-height: 3
 footer
     text-align: center
     background: #FFFFFF45
     padding: 40px
+    @media screen and ( max-width: 750px )
+        padding: 20px
     .sns-container
         .sns-container-list
             display: flex
@@ -211,17 +379,43 @@ footer
                 opacity: 0.5
     .copy-right
         font-size: 14px
-.btn
-    width: fit-content
-    padding: 15px 25px
-    margin: 30px auto
-    background: #A0A0A02C
-    font-family: Hiragino Mincho ProN
-    font-size: 15px
-    &:hover
-        opacity: 0.6
 @media screen and ( max-width: 750px )
     .pc-header
         display: none
     .sp-header
         display: block
+
+//swiper
+.swiper-button-prev,
+.swiper-button-next
+    &:focus
+        outline: none
+    &:active
+        opacity: 0.6
+
+//top
+.load
+    width: 100%
+    height: 100vh
+    background: #fff
+    position: fixed
+    z-index: 1
+.logo_content
+    text-align: center
+    height: 100vh
+#wrap_all path
+    fill: #111
+    stroke: #111
+    stroke-width: 2px
+    animation: svg 5s ease-in both infinite
+@keyframes svg
+    0%
+        fill: transparent
+        stroke-dasharray: 2000px
+        stroke-dashoffset: 2000px
+    20%
+        stroke-dashoffset: 0
+    30%
+        fill: transparent
+    50%
+        fill: #111
