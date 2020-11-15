@@ -83,6 +83,12 @@ var mySwiper = new Swiper ('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    767: {
+      slidesPerView: 1.4,
+      pagenation: false,
+    }
+  },
 })
 
 //ローディング

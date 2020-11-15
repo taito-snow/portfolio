@@ -101,6 +101,7 @@ h2.left
         position: absolute
         height: 100vh
         width: 100%
+        object-fit: cover
 .top-wrapper
     height: 100vh
     z-index: 1
@@ -156,10 +157,14 @@ h2.left
             h1.top-logo-title
                 img
                     width: 280px
+                    @media screen and ( max-width: 750px )
+                        width: 190px
             .top-logo-text
                 color: #fff
                 font-family: Hiragino Mincho ProN
                 font-size: 1.5rem
+                @media screen and ( max-width: 750px )
+                    font-size: 1.2rem
     .top-text
         position: absolute
         bottom: 20%
@@ -171,7 +176,9 @@ h2.left
         align-items: center
         justify-content: center
         @media screen and ( max-width: 750px )
-            font-size: 1.2rem
+            font-size: 1rem
+            right: auto
+            left: 20px
         &:after
             border-top: 1px solid
             content: ""
@@ -262,16 +269,28 @@ header
                     @media screen and ( max-width: 750px )
                         width: 100%
                         padding: 0
+                        height: 280px
                     .work-name
                         font-size: 22px
                         color: #DDB47C
+                        @media screen and ( max-width: 750px )
+                            font-size: 20px
                     .work-dis
                         font-size: 18px
                         margin: 15px 0
+                        @media screen and ( max-width: 750px )
+                            font-size: 17px
+                    .work-detail
+                        @media screen and ( max-width: 750px )
+                            font-size: 14px
                     .detail
                         right: 0
                         bottom: 0
                         position: absolute
+.swiper-button-prev,
+.swiper-button-next
+    @media screen and ( max-width: 750px )
+        display: none
 .about
     padding-top: 90px
     .about-text
@@ -314,6 +333,12 @@ header
                 p
                     @media screen and ( max-width: 750px )
                         font-size: 14px
+                .year
+                    width: 35%
+                td
+                    padding-bottom: 10px
+                    font-size: 14px
+                    vertical-align: top
 .service
     .service-wrapper
         .service-items

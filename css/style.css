@@ -151,6 +151,7 @@ h2.left span {
   position: absolute;
   height: 100vh;
   width: 100%;
+  object-fit: cover;
 }
 
 .top-wrapper {
@@ -222,10 +223,22 @@ h2.left span {
   width: 280px;
 }
 
+@media screen and (max-width: 750px) {
+  .top-wrapper .top-logo .top-logo-border h1.top-logo-title img {
+    width: 190px;
+  }
+}
+
 .top-wrapper .top-logo .top-logo-border .top-logo-text {
   color: #fff;
   font-family: Hiragino Mincho ProN;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .top-wrapper .top-logo .top-logo-border .top-logo-text {
+    font-size: 1.2rem;
+  }
 }
 
 .top-wrapper .top-text {
@@ -242,7 +255,9 @@ h2.left span {
 
 @media screen and (max-width: 750px) {
   .top-wrapper .top-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    right: auto;
+    left: 20px;
   }
 }
 
@@ -380,6 +395,7 @@ header .sp-header {
   .work .work-wrapper .work-contents .work-content .work-content-text {
     width: 100%;
     padding: 0;
+    height: 280px;
   }
 }
 
@@ -388,15 +404,40 @@ header .sp-header {
   color: #DDB47C;
 }
 
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content .work-content-text .work-name {
+    font-size: 20px;
+  }
+}
+
 .work .work-wrapper .work-contents .work-content .work-content-text .work-dis {
   font-size: 18px;
   margin: 15px 0;
+}
+
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content .work-content-text .work-dis {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .work .work-wrapper .work-contents .work-content .work-content-text .work-detail {
+    font-size: 14px;
+  }
 }
 
 .work .work-wrapper .work-contents .work-content .work-content-text .detail {
   right: 0;
   bottom: 0;
   position: absolute;
+}
+
+@media screen and (max-width: 750px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 .about {
@@ -482,6 +523,16 @@ header .sp-header {
   .about .about-text .about-text-wrap .career p {
     font-size: 14px;
   }
+}
+
+.about .about-text .about-text-wrap .career .year {
+  width: 35%;
+}
+
+.about .about-text .about-text-wrap .career td {
+  padding-bottom: 10px;
+  font-size: 14px;
+  vertical-align: top;
 }
 
 .service .service-wrapper .service-items {
